@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -13,7 +14,9 @@ public class CensorBadWords {
 
     public static void main(String[] args) {
         String inputText = "This is a damn bad example with some stupid words.";
-        List<String> badWordsList = List.of("damn", "stupid");
+        List<String> badWordsList = new ArrayList<>();
+        badWordsList.add("damn");
+        badWordsList.add("stupid");
 
         String result = censorText(inputText, badWordsList);
         System.out.println(result);
